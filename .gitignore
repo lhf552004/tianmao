@@ -1,8 +1,11 @@
 *.class
 .idea/
+index (2).html
+index (3).html
+config.rb
+
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
-
 # Package Files #
 *.jar
 *.war
