@@ -1,17 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-  {% include head.html %}
-</head>
-<body>
-  {% include header.html %}
-  <div class="container">
-    <p class="intro">
-      {{ site.intro }}
-    </p>
-  {{ content }}
-
-  {% include footer.html %}
-  </div><!-- /.main -->
-</body>
-</html>
+---
+theme :
+  name : bootstrap-3
+---
+{% include JB/setup %}
+{% include themes/bootstrap-3/default.html %}
