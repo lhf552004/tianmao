@@ -65,7 +65,10 @@ h1, h2, h3, h4 {
   border-radius: 3px;
   text-decoration: none;
   border: 1px dashed #cccccc; }
-
+     
+span{
+  color: #CCEEFF; 
+     }
 .tag_box a span {
   vertical-align: super;
   font-size: 0.8em; }
@@ -80,8 +83,9 @@ h1, h2, h3, h4 {
   
 body {
 		background-color: #2e3141;
-		background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
+		background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../images/bg.jpg");
 		background-size: auto, cover;
 		background-attachment: fixed, fixed;
 		background-position: center, center;
 	}
+  
