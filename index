@@ -166,13 +166,11 @@ Here's a sample "posts list".
 
 <ul class="posts">
   
-    <li><span>15 Mar 2016</span> &raquo; <a href="/travel/2016/03/15/Prague">Dresden</a></li>
+    <li><span>19 Mar 2016</span> &raquo; <a href="/travel/2016/03/19/Berlin">柏林</a></li>
   
-    <li><span>15 Mar 2016</span> &raquo; <a href="/travel/2016/03/15/Dresden">德累斯顿</a></li>
+    <li><span>12 Mar 2016</span> &raquo; <a href="/travel/2016/03/12/Prague">布拉格</a></li>
   
-    <li><span>11 Sep 2013</span> &raquo; <a href="/javascript/2013/09/11/jsxl-fkh">js方括号的一种用法</a></li>
-  
-    <li><span>29 Dec 2011</span> &raquo; <a href="/lessons/2011/12/29/jekyll-introduction">Jekyll Introduction</a></li>
+    <li><span>09 Mar 2016</span> &raquo; <a href="/travel/2016/03/09/Dresden">德累斯顿</a></li>
   
 </ul>
 
