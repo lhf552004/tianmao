@@ -69,6 +69,10 @@ h1, h2, h3, h4 {
 span{
   color: #CCEEFF; 
      }
+
+p{
+  color: #FFCC22;
+}
 .tag_box a span {
   vertical-align: super;
   font-size: 0.8em; }
