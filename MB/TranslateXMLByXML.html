@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="TranslateXMLByXMLapp" ng-controller="TranslateXMLByXMLCtrl">
 <head>
     <meta charset="UTF-8">
     <title>Translate XML by XML</title>
@@ -13,11 +13,12 @@
     <!--<script src="../js/vendor/jquery.ui.widget.js"></script>-->
     <!--<script src="../js/jquery.iframe-transport.js"></script>-->
     <!--<script src="../js/jquery.fileupload.js"></script>-->
-    <script src="../js/TranslateXMLByXML.js"></script>
-
-
+    <script src="../js/angular.min.js"></script>
+    <script src="../js/Text.js"></script>
+    <script src="../js/TranslateXMLByXMLapp.js"></script>
 </head>
 <body>
+
 <div class="page-header">
 
 </div>
@@ -42,27 +43,28 @@
         </div>
     </div>
 
-    <div class="row" >
+    <div class="row">
         <div class="col-lg-3 col-xs-3 col-sm-3">
 
             <span class="label label-default">Please choose target file</span>
-            <input id="target_upload" name="target_upload" type="file">
+            <input ng-model="targetUpload" type="file" onchange="angular.element(this).scope().readXML(this,'target')">
+            <!--ng-change="readXML(this.files[0],{{targetXML}})"-->
             <!--onchange="readfile(this.files[0])-->
             <span class="label label-default">Please choose source file</span>
-            <input id="source_upload" name="source_upload" type="file">
+            <input id="source_upload" name="source_upload" type="file" onchange="angular.element(this).scope().readXML(this,'source')">
         </div>
         <div class="col-lg-2 col-xs-2 col-sm-3">
             <div class="dropdown">
                 <button type="button" class="btn dropdown-toggle" id="identical"
                         data-toggle="dropdown">
-                    Identical By
+                    Identical By {{identical}}
                     <span class="caret"></span>
                 </button>
                 <ul id="identicalUl" class="dropdown-menu" role="menu" aria-labelledby="identical">
-                    <li role="presentation">
+                    <li role="presentation" ng-click = "identicalSelected('Label')">
                         Label
                     </li>
-                    <li role="presentation">
+                    <li role="presentation" ng-click = "identicalSelected('ID')">
                         ID
                     </li>
                 </ul>
@@ -71,7 +73,7 @@
         </div>
 
         <div class=" col-lg-3 col-xs-3 col-sm-3">
-            <button id="import" type="button" class="btn btn-primary">Import Target XML</button>
+            <button id="import" class="btn btn-primary" ng-click="importTarget()">Import Target XML</button>
         </div>
         <div class="col-lg-2 col-xs-2 col-sm-3">
             <button id="override" type="button" class="btn btn-primary">Override</button>
@@ -95,26 +97,26 @@
         <div class="col-lg-3 col-xs-3 col-sm-3">
             <div class="input-group">
                 <span class="input-group-addon">ID</span>
-                <input id="id_fitler" type="text" class="form-control" placeholder="ID">
+                <input ng-model="idFilter" ng-change="idFilterChange()" type="text" class="form-control" placeholder="ID">
             </div>
 
         </div>
         <div class="col-lg-3 col-xs-3 col-sm-3">
             <div class="input-group">
                 <span class="input-group-addon">Label</span>
-                <input id="label_fitler" type="text" class="form-control" placeholder="Label">
+                <input ng-model="labelFitler" ng-change="labelFilterChange()" type="text" class="form-control" placeholder="Label">
             </div>
         </div>
         <div class="col-lg-3 col-xs-3 col-sm-3">
             <div class="input-group">
                 <span class="input-group-addon">OriginalText</span>
-                <input id="OriginalText_fitler" type="text" class="form-control" placeholder="OriginalText">
+                <input ng-model="OriginalTextFitler" ng-change="OriginalTextFilterChange()" type="text" class="form-control" placeholder="OriginalText">
             </div>
         </div>
         <div class="col-lg-3 col-xs-3 col-sm-3">
             <div class="input-group">
                 <span class="input-group-addon">TranslateText</span>
-                <input id="TranslateText_fitler" type="text" class="form-control" placeholder="TranslateText">
+                <input ng-model="innerTextFilter" ng-change="innerTextFilterChange()" type="text" class="form-control" placeholder="TranslateText">
             </div>
         </div>
     </div>
@@ -131,9 +133,12 @@
                     <th>Translate Text</th>
                 </tr>
                 </thead>
-                <tbody>
-
-                </tbody>
+                <tr ng-repeat=" text in texts">
+                    <td>{{text.id}}</td>
+                    <td>{{text.label}}</td>
+                    <td>{{text.OriginalText}}</td>
+                    <td><input type="text" label = {{text.label}} value={{text.innerText}} onchange="angular.element(this).scope().innerTextChange(this)"></td>
+                </tr>
             </table>
         </div>
     </div>
@@ -142,7 +147,7 @@
         <div class="col-lg-6 col-xs-6 col-sm-6">
             <div class="input-group">
                 <label for="result">Results:</label>
-                <textarea class="form-control" rows="20" cols="100%" id="result"></textarea>
+                <textarea class="form-control" rows="20" cols="100%" ng-model="result"></textarea>
             </div>
         </div>
         <div class="col-lg-6 col-xs-6 col-sm-6">
