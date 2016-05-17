@@ -32,3 +32,11 @@ body > .container {
 .remark{
     padding: 0px 0px 15px;
 }
+
+div[class*=table]{
+    height: 500px;
+    overflow: auto;
+}
+input[label]{
+    width: 100%;
+}
