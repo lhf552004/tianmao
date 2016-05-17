@@ -15,15 +15,15 @@ app.controller('TranslateXMLByXMLCtrl', function ($scope, $filter) {
         OriginalText: '',
         innerText: ''
     };
-    var log ="";
-
+    var log = "";
+    var rawTexts = [];
     //$scope variables
     $scope.identical = "";
 
-    $scope.idFilter = "";
-    $scope.labelFilter = "";
-    $scope.OriginalTextFilter = "";
-    $scope.innerTextFilter = "";
+    //$scope.idFilter = "";
+    //$scope.labelFitler = "";
+    //$scope.OriginalTextFilter = "";
+    //$scope.innerTextFilter = "";
     $scope.texts = [];
     $scope.result = "";
 
@@ -66,39 +66,10 @@ app.controller('TranslateXMLByXMLCtrl', function ($scope, $filter) {
             alert("Please select Identical!");
             return;
         }
-        updateDataGridView(null, null);
-    }
-
-    function idFilterChange() {
-        updateDataGridView($scope.idFilter, "id");
-    }
-
-    function labelFilterChange() {
-        updateDataGridView($scope.labelFilter, "label");
-    }
-
-    function OriginalTextFilterChange() {
-        updateDataGridView($scope.OriginalTextFilter, "OriginalText");
-    }
-
-    function innerTextFilterChange() {
-        updateDataGridView($scope.innerTextFilter, "innerText");
-    }
-
-    function identicalSelected(identical) {
-        $scope.identical = identical;
-    }
-    function innerTextChange(context){
-        var $context = $(context);
-        var newValue = $context.val();
-        var label = $context.attr("label");
-        var text = $filter('getById')($scope.texts, label);
-    }
-    function updateDataGridView(criteriaString, attributeName) {
         try {
             if (targetXML == null) {
                 log = "target XML hasn't been imported <br>";
-                $scope.result = $scope.result +log;
+                $scope.result = $scope.result + log;
                 alert(log);
                 throw "quit";
             }
@@ -109,33 +80,16 @@ app.controller('TranslateXMLByXMLCtrl', function ($scope, $filter) {
 
             }
             else {
-                log = "Please select identical <br>";
-                $scope.result = $scope.result +log;
+                log = "Please select identical \n";
+                $scope.result = $scope.result + log;
                 alert(log);
                 return;
             }
             $scope.texts = [];
             var xml = $(targetXML);
-            var idXML;
-            var labelXML;
-            var originalTextXML;
-            if (criteriaString != null) {
-                filterList[attributeName] = criteriaString;
-            }
-            var filterString = '';
-            if (filterList.id != '') {
-                filterString = "[id^='" + filterList.id + "']";
-            }
-            if (filterList.label != '') {
-                filterString = filterString + "[label^='" + filterList.label + "']";
 
-            }
-            if (filterList.OriginalText != '') {
-                filterString = filterString + "[OriginalText^='" + filterList.OriginalText + "']";
-            }
 
-            filterString = "Text" + filterString;
-            $(xml).find(filterString).each(function () {
+            $(xml).find("Text").each(function () {
 
                 var $text = $(this);
                 var text = {};
@@ -143,31 +97,85 @@ app.controller('TranslateXMLByXMLCtrl', function ($scope, $filter) {
 
                 var id = $text.attr("id");
                 var label = $text.attr("label");
-                var originalText = $text.attr("OriginalText");
+                var OriginalText = $text.attr("OriginalText");
                 var translationText = $text.text();
-                if (filterList.innerText != '') {
-                    if (translationText.toLowerCase().indexOf(filterList.innerText) < 0) {
-                        flag_add = false;
-                    }
-
-                }
-                if (flag_add) {
-                    text = new Text(id, label, originalText, translationText);
-                    $scope.texts.push(text);
-                    log = "added text: " + label + " <br>";
-                    $scope.result = $scope.result +log;
-                    //var htmlStr = '<tr>' +
-                    //    '<td>' + id + '</td>' +
-                    //    '<td>' + label + '</td>' +
-                    //    '<td>' + originalText + '</td>' +
-                    //    '<td><input type="text" name="' + label + '" value='+ translationText + '></td>' +
-                    //    '</tr>';
-                    //
-                    //$('#translationTable tr:last').after(htmlStr);
-                }
-
+                text = new Text(id, label, OriginalText, translationText);
+                $scope.texts.push(text);
+                log = "added text: " + label + " <br>";
+                $scope.result = $scope.result + log;
+                rawTexts = $scope.texts;
 
             });
+        }
+        catch (e) {
+            $("#result").append(e);
+        }
+    }
+
+    function idFilterChange() {
+        updateTexts($scope.idFilter, "id");
+    }
+
+    function labelFilterChange() {
+
+        updateTexts($scope.labelFitler, "label");
+    }
+
+    function OriginalTextFilterChange() {
+        updateTexts($scope.OriginalTextFitler, "OriginalText");
+    }
+
+    function innerTextFilterChange() {
+        updateTexts($scope.innerTextFilter, "innerText");
+    }
+
+    function identicalSelected(identical) {
+        $scope.identical = identical;
+    }
+
+    function innerTextChange(context) {
+        var $context = $(context);
+        var newValue = $context.val();
+        var label = $context.attr("label");
+        var text = $filter('getByLabel')($scope.texts, label);
+        text.innerText = newValue;
+    }
+
+    function updateTexts(criteriaString, attributeName) {
+        try {
+            if (criteriaString != null) {
+                filterList[attributeName] = criteriaString;
+            }
+            $scope.texts = rawTexts.filter(function (text) {
+                var $text = $(text);
+                var flag_add = true;
+                var id = $text.attr("id");
+                var label = $text.attr("label");
+                var OriginalText = $text.attr("OriginalText");
+                var translationText = $text.text();
+                if (filterList.id != '') {
+                    if (id.toLowerCase().indexOf(filterList.id.toLowerCase()) == -1) {
+                        flag_add = false;
+                    }
+                }
+                if (filterList.label != '') {
+                    if (label.toLowerCase().indexOf(filterList.label.toLowerCase()) == -1) {
+                        flag_add = false;
+                    }
+                }
+                if (filterList.OriginalText != '') {
+                    if (OriginalText.toLowerCase().indexOf(filterList.OriginalText.toLowerCase()) == -1) {
+                        flag_add = false;
+                    }
+                }
+                if (filterList.innerText != '') {
+                    if (translationText.toLowerCase().indexOf(filterList.innerText.toLowerCase()) < 0) {
+                        flag_add = false;
+                    }
+                }
+                return flag_add;
+            });
+
         }
         catch (e) {
             $("#result").append(e);
@@ -176,12 +184,15 @@ app.controller('TranslateXMLByXMLCtrl', function ($scope, $filter) {
 
     }
 
+    function override() {
+
+    }
 });
 
-app.filter('getByLabel', function() {
-    return function(input, label) {
-        var i=0, len=input.length;
-        for (; i<len; i++) {
+app.filter('getByLabel', function () {
+    return function (input, label) {
+        var i = 0, len = input.length;
+        for (; i < len; i++) {
             if (input[i].label == label) {
                 return input[i];
             }
