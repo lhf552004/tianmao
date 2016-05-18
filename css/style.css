@@ -40,3 +40,7 @@ div[class*=table]{
 input[label]{
     width: 100%;
 }
+div[class$=progress]{
+    margin-top: 20px;
+    margin-bottom: 0px;
+}

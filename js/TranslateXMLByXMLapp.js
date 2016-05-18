@@ -95,8 +95,9 @@ app.controller('TranslateXMLByXMLCtrl', function ($scope, $filter) {
             }
             $scope.texts = [];
             var xml = $(targetXML);
-
-
+            var n = $(xml).find("Text").length;
+            var i =0;
+            var per = 0;
             $(xml).find("Text").each(function () {
 
                 var $text = $(this);
@@ -107,12 +108,21 @@ app.controller('TranslateXMLByXMLCtrl', function ($scope, $filter) {
                 var label = $text.attr("label");
                 var OriginalText = $text.attr("OriginalText");
                 var translationText = $text.text();
+                var $deferReady = new $.Deferred();
+                $deferReady.done(function(){
+                    $("#status").text("import completed");
+                }).fail( console.error );
                 text = new Text(id, label, OriginalText, translationText);
                 $scope.texts.push(text);
                 log = "added text: " + label + " <br>";
                 $scope.result = $scope.result + log;
                 targetTexts = $scope.texts;
-
+                i++;
+                per = (i/n)*100;
+                if(per>=100)
+                {
+                    $deferReady.resolve();
+                }
             });
         }
         catch (e) {
@@ -152,7 +162,18 @@ app.controller('TranslateXMLByXMLCtrl', function ($scope, $filter) {
     function idFilterChange() {
         updateTexts($scope.idFilter, "id");
     }
+    function updateProgressBar(value){
 
+        if(value>=100)
+        {
+            $("#progressbar").attr("style","width:0%");
+            $("#progressbar").text("0%");
+        }
+        else {
+            $("#progressbar").attr("style","width:" +value+"%");
+            $("#progressbar").text(value+"%");
+        }
+    }
     function labelFilterChange() {
 
         updateTexts($scope.labelFitler, "label");
