@@ -1,11 +1,11 @@
-var PCP = PCP || {};
-PCP.Importer = PCP.Importer || {};
+var MB = MB || {};
+MB.Export = MB.Export || {};
 
-PCP.Importer.XMLExporter = function () {
+MB.Export.XMLExporter = function () {
 
 }
 
-PCP.Importer.XMLExporter.prototype = (function () {
+MB.Export.XMLExporter.prototype = (function () {
     var tagName = "",
         prefix = "",
         tagNames = [],
@@ -170,8 +170,8 @@ PCP.Importer.XMLExporter.prototype = (function () {
     return {
         exportToCSVFile: function () {
             getNodes().done( function () {
-                var fileName = "plc.csv";
-                var type = "text/plain;charset=utf-8";
+                var fileName = "Chinese.XML";
+                var type = "text/plain;charset=utf-16";
                 var theContents = [];
                 var parent = {};
                 for ( var i = 0, max = unitArray.length; i < max; i++ ) {
