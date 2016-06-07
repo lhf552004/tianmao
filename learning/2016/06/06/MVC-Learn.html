@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Tags</title>
+    <title>MVC</title>
     
     <meta name="author" content="Name Lastname">
 
@@ -109,7 +109,7 @@
     
       
       	
-      	<li class="active"><a href="/tags" class="active">Tags</a></li>
+      	<li><a href="/tags">Tags</a></li>
       	
       
     
@@ -130,29 +130,81 @@
       <div class="container">
         
 <div class="page-header">
-  <h1>Tags </h1>
+  <h1>MVC <small>cshtml</small></h1>
 </div>
 
-<div class="row">
+<div class="row post-full">
   <div class="col-xs-12">
-    
+    <div class="date">
+      <span>06 June 2016</span>
+    </div>
+    <div class="content">
+      
+<h2 id="section">部署</h2>
 
-<ul class="tag_box inline">
+<p>问题：required providerName attribute</p>
+
+<p>问题描述
+<span>我把数据库从LocalDB改为部署到SQL Server上，发生一个错误:</span>
+<span>The connection string ‘EFDbContext’ in the application’s configuration file does not contain the required providerName attribute</span>
+主要问题是根目录下的Web.config的连接配置，应该是节点的attribute,而不是作为connectionString的值</p>
+
+<p>原来的配置上</p>
+
+<p>&lt;add name=”EFDbContext” connectionString=”Data Source=CN-LIA-NB1\SQLEXPRESS;Initial Catalog=SportsStore;User ID=sa; Password=Roding;providerName=System.Data.SqlClient；MultipleActiveResultSets=true” /&gt;</p>
+
+<p>正确配置：</p>
+
+<p>&lt;add name=”EFDbContext” providerName=”System.Data.SqlClient” connectionString=”Data Source=CN-LIA-NB1\SQLEXPRESS;Initial Catalog=SportsStore;User ID=sa; Password=Roding;MultipleActiveResultSets=true”/&gt;</p>
+
+<p>参考资料：
+http://forums.asp.net/t/1858681.aspx?The+connection+string+EFDbContext+in+the+application+s+configuration+file+does+not+contain+the+required+providerName+attribute+</p>
+
+<h2 id="actionresult-does-not-contain-viewdata">ActionResult does not contain ViewData</h2>
+
+<p>问题描述，在unit test的测试方法中，index()返回值无法引用属性ViewData</p>
+
+<p>CartIndexViewModel result = (CartIndexViewModel)target.Index(cart, “myUrl”).ViewData.Model;</p>
+
+<p>原因是由于Index()返回值的类型是ActionResult，而ActionResult是抽象类，没有该属性，该属性是由ViewResultBase所有。<br />
+ViewResult继承ViewResultBase，而ViewResultBase继承于ActionResult
+只需强制转换成类型ViewResult:</p>
+
+<p>Product[] result = ((IEnumerable<Product>)((ViewResult)target.Index()).ViewData.Model).ToArray();</Product></p>
+
+<h2 id="cshtml">在cshtml页面中使用拓展方法会报不支持动态转换</h2>
+<p>需要显性强制转换<br />
+@Html.PageLinks(Model.PagingInfo, x=&gt;Url.Action(“List”,new { page =x, category = Model.CurrentCategory }))</p>
+
+    </div>
+
+  
+    <ul class="tag_box inline">
+      <li><i class="glyphicon glyphicon-open"></i></li>
+      
+      
+
+
+  
+     
+    	<li><a href="/categories.html#Learning-ref">
+    		Learning <span>1</span>
+    	</a></li>
     
   
 
 
+    </ul>
+    
+
   
-     
-    	<li><a href="/tags.html#德累斯顿-ref">德累斯顿 <span>1</span></a></li>
-     
-    	<li><a href="/tags.html#旅游-ref">旅游 <span>2</span></a></li>
-     
-    	<li><a href="/tags.html#布拉格-ref">布拉格 <span>1</span></a></li>
-     
-    	<li><a href="/tags.html#柏林-ref">柏林 <span>1</span></a></li>
-     
-    	<li><a href="/tags.html#Travel-ref">Travel <span>1</span></a></li>
+    <ul class="tag_box inline">
+      <li><i class="glyphicon glyphicon-tags"></i></li>
+      
+      
+
+
+  
      
     	<li><a href="/tags.html#MVC5-ref">MVC5 <span>1</span></a></li>
      
@@ -162,157 +214,40 @@
 
 
 
-</ul>
-
-
- 
-  <h2 id="德累斯顿-ref">德累斯顿</h2>
-  <ul>
-      
-    
-
-
-  
-    
-      
-      	
-      	<li><a href="/travel/2016/03/09/Dresden">德累斯顿</a></li>
-      	
-      
+    </ul>
     
   
-
-
-
-  </ul>
- 
-  <h2 id="旅游-ref">旅游</h2>
-  <ul>
-      
+    <hr>
+    <ul class="pagination">
+    
+      <li class="prev"><a href="/travel/2016/03/19/Berlin" title="柏林">&laquo; Previous</a></li>
+    
+      <li><a href="/archive.html">Archive</a></li>
+    
+      <li class="next disabled"><a>Next &rarr;</a>
+    
+    </ul>
+    <hr>
     
 
 
-  
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
     
-      
-      	
-      	<li><a href="/travel/2016/03/12/Prague">布拉格</a></li>
-      	
-      
+    var disqus_developer = 1;
+    var disqus_shortname = 'jekyllbootstrap'; // required: replace example with your forum shortname
     
-  
-    
-      
-      	
-      	<li><a href="/travel/2016/03/09/Dresden">德累斯顿</a></li>
-      	
-      
-    
-  
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
 
 
-
-  </ul>
- 
-  <h2 id="布拉格-ref">布拉格</h2>
-  <ul>
-      
-    
-
-
-  
-    
-      
-      	
-      	<li><a href="/travel/2016/03/12/Prague">布拉格</a></li>
-      	
-      
-    
-  
-
-
-
-  </ul>
- 
-  <h2 id="柏林-ref">柏林</h2>
-  <ul>
-      
-    
-
-
-  
-    
-      
-      	
-      	<li><a href="/travel/2016/03/19/Berlin">柏林</a></li>
-      	
-      
-    
-  
-
-
-
-  </ul>
- 
-  <h2 id="Travel-ref">Travel</h2>
-  <ul>
-      
-    
-
-
-  
-    
-      
-      	
-      	<li><a href="/travel/2016/03/19/Berlin">柏林</a></li>
-      	
-      
-    
-  
-
-
-
-  </ul>
- 
-  <h2 id="MVC5-ref">MVC5</h2>
-  <ul>
-      
-    
-
-
-  
-    
-      
-      	
-      	<li><a href="/learning/2016/06/06/MVC-Learn">MVC</a></li>
-      	
-      
-    
-  
-
-
-
-  </ul>
- 
-  <h2 id="js-ref">js</h2>
-  <ul>
-      
-    
-
-
-  
-    
-      
-      	
-      	<li><a href="/learning/2016/06/06/MVC-Learn">MVC</a></li>
-      	
-      
-    
-  
-
-
-
-  </ul>
 
 
   </div>

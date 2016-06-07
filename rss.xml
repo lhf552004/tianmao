@@ -5,10 +5,54 @@
         <description>Jekyll Bootstrap - Name Lastname</description>
         <link>http://username.github.io</link>
         <atom:link href="http://username.github.io/rss.xml" rel="self" type="application/rss+xml" />
-        <lastBuildDate>Wed, 11 May 2016 14:02:53 +0800</lastBuildDate>
-        <pubDate>Wed, 11 May 2016 14:02:53 +0800</pubDate>
+        <lastBuildDate>Mon, 06 Jun 2016 21:50:30 -0700</lastBuildDate>
+        <pubDate>Mon, 06 Jun 2016 21:50:30 -0700</pubDate>
         <ttl>60</ttl>
 
+
+        <item>
+                <title>MVC</title>
+                <description>
+&lt;h2 id=&quot;section&quot;&gt;部署&lt;/h2&gt;
+
+&lt;p&gt;问题：required providerName attribute&lt;/p&gt;
+
+&lt;p&gt;问题描述
+&lt;span&gt;我把数据库从LocalDB改为部署到SQL Server上，发生一个错误:&lt;/span&gt;
+&lt;span&gt;The connection string ‘EFDbContext’ in the application’s configuration file does not contain the required providerName attribute&lt;/span&gt;
+主要问题是根目录下的Web.config的连接配置，应该是节点的attribute,而不是作为connectionString的值&lt;/p&gt;
+
+&lt;p&gt;原来的配置上&lt;/p&gt;
+
+&lt;p&gt;&amp;lt;add name=”EFDbContext” connectionString=”Data Source=CN-LIA-NB1\SQLEXPRESS;Initial Catalog=SportsStore;User ID=sa; Password=Roding;providerName=System.Data.SqlClient；MultipleActiveResultSets=true” /&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;正确配置：&lt;/p&gt;
+
+&lt;p&gt;&amp;lt;add name=”EFDbContext” providerName=”System.Data.SqlClient” connectionString=”Data Source=CN-LIA-NB1\SQLEXPRESS;Initial Catalog=SportsStore;User ID=sa; Password=Roding;MultipleActiveResultSets=true”/&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;参考资料：
+http://forums.asp.net/t/1858681.aspx?The+connection+string+EFDbContext+in+the+application+s+configuration+file+does+not+contain+the+required+providerName+attribute+&lt;/p&gt;
+
+&lt;h2 id=&quot;actionresult-does-not-contain-viewdata&quot;&gt;ActionResult does not contain ViewData&lt;/h2&gt;
+
+&lt;p&gt;问题描述，在unit test的测试方法中，index()返回值无法引用属性ViewData&lt;/p&gt;
+
+&lt;p&gt;CartIndexViewModel result = (CartIndexViewModel)target.Index(cart, “myUrl”).ViewData.Model;&lt;/p&gt;
+
+&lt;p&gt;原因是由于Index()返回值的类型是ActionResult，而ActionResult是抽象类，没有该属性，该属性是由ViewResultBase所有。&lt;br /&gt;
+ViewResult继承ViewResultBase，而ViewResultBase继承于ActionResult
+只需强制转换成类型ViewResult:&lt;/p&gt;
+
+&lt;p&gt;Product[] result = ((IEnumerable&lt;Product&gt;)((ViewResult)target.Index()).ViewData.Model).ToArray();&lt;/Product&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;cshtml&quot;&gt;在cshtml页面中使用拓展方法会报不支持动态转换&lt;/h2&gt;
+&lt;p&gt;需要显性强制转换&lt;br /&gt;
+@Html.PageLinks(Model.PagingInfo, x=&amp;gt;Url.Action(“List”,new { page =x, category = Model.CurrentCategory }))&lt;/p&gt;
+</description>
+                <link>http://username.github.io/learning/2016/06/06/MVC-Learn</link>
+                <guid>http://username.github.io/learning/2016/06/06/MVC-Learn</guid>
+                <pubDate>Mon, 06 Jun 2016 00:00:00 -0700</pubDate>
+        </item>
 
         <item>
                 <title>柏林</title>
@@ -52,7 +96,7 @@
 </description>
                 <link>http://username.github.io/travel/2016/03/19/Berlin</link>
                 <guid>http://username.github.io/travel/2016/03/19/Berlin</guid>
-                <pubDate>Sat, 19 Mar 2016 00:00:00 +0800</pubDate>
+                <pubDate>Sat, 19 Mar 2016 00:00:00 -0700</pubDate>
         </item>
 
         <item>
@@ -82,7 +126,7 @@
 </description>
                 <link>http://username.github.io/travel/2016/03/12/Prague</link>
                 <guid>http://username.github.io/travel/2016/03/12/Prague</guid>
-                <pubDate>Sat, 12 Mar 2016 00:00:00 +0800</pubDate>
+                <pubDate>Sat, 12 Mar 2016 00:00:00 -0800</pubDate>
         </item>
 
         <item>
@@ -464,7 +508,7 @@ or jump right into &lt;a href=&quot;&quot;&gt;Usage&lt;/a&gt; if you’d like.&l
 </description>
                 <link>http://username.github.io/travel/2016/03/09/Dresden</link>
                 <guid>http://username.github.io/travel/2016/03/09/Dresden</guid>
-                <pubDate>Wed, 09 Mar 2016 00:00:00 +0800</pubDate>
+                <pubDate>Wed, 09 Mar 2016 00:00:00 -0800</pubDate>
         </item>
 
 
