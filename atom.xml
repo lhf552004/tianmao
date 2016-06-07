@@ -4,7 +4,7 @@
  <title>Jekyll Bootstrap</title>
  <link href="http://username.github.io/atom.xml" rel="self"/>
  <link href="http://username.github.io"/>
- <updated>2016-05-11T14:02:53+08:00</updated>
+ <updated>2016-06-06T21:50:30-07:00</updated>
  <id>http://username.github.io</id>
  <author>
    <name>Name Lastname</name>
@@ -13,9 +13,53 @@
 
  
  <entry>
+   <title>MVC</title>
+   <link href="http://username.github.io/learning/2016/06/06/MVC-Learn"/>
+   <updated>2016-06-06T00:00:00-07:00</updated>
+   <id>http://username.github.io/learning/2016/06/06/MVC-Learn</id>
+   <content type="html">
+&lt;h2 id=&quot;section&quot;&gt;部署&lt;/h2&gt;
+
+&lt;p&gt;问题：required providerName attribute&lt;/p&gt;
+
+&lt;p&gt;问题描述
+&lt;span&gt;我把数据库从LocalDB改为部署到SQL Server上，发生一个错误:&lt;/span&gt;
+&lt;span&gt;The connection string ‘EFDbContext’ in the application’s configuration file does not contain the required providerName attribute&lt;/span&gt;
+主要问题是根目录下的Web.config的连接配置，应该是节点的attribute,而不是作为connectionString的值&lt;/p&gt;
+
+&lt;p&gt;原来的配置上&lt;/p&gt;
+
+&lt;p&gt;&amp;lt;add name=”EFDbContext” connectionString=”Data Source=CN-LIA-NB1\SQLEXPRESS;Initial Catalog=SportsStore;User ID=sa; Password=Roding;providerName=System.Data.SqlClient；MultipleActiveResultSets=true” /&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;正确配置：&lt;/p&gt;
+
+&lt;p&gt;&amp;lt;add name=”EFDbContext” providerName=”System.Data.SqlClient” connectionString=”Data Source=CN-LIA-NB1\SQLEXPRESS;Initial Catalog=SportsStore;User ID=sa; Password=Roding;MultipleActiveResultSets=true”/&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;参考资料：
+http://forums.asp.net/t/1858681.aspx?The+connection+string+EFDbContext+in+the+application+s+configuration+file+does+not+contain+the+required+providerName+attribute+&lt;/p&gt;
+
+&lt;h2 id=&quot;actionresult-does-not-contain-viewdata&quot;&gt;ActionResult does not contain ViewData&lt;/h2&gt;
+
+&lt;p&gt;问题描述，在unit test的测试方法中，index()返回值无法引用属性ViewData&lt;/p&gt;
+
+&lt;p&gt;CartIndexViewModel result = (CartIndexViewModel)target.Index(cart, “myUrl”).ViewData.Model;&lt;/p&gt;
+
+&lt;p&gt;原因是由于Index()返回值的类型是ActionResult，而ActionResult是抽象类，没有该属性，该属性是由ViewResultBase所有。&lt;br /&gt;
+ViewResult继承ViewResultBase，而ViewResultBase继承于ActionResult
+只需强制转换成类型ViewResult:&lt;/p&gt;
+
+&lt;p&gt;Product[] result = ((IEnumerable&lt;Product&gt;)((ViewResult)target.Index()).ViewData.Model).ToArray();&lt;/Product&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;cshtml&quot;&gt;在cshtml页面中使用拓展方法会报不支持动态转换&lt;/h2&gt;
+&lt;p&gt;需要显性强制转换&lt;br /&gt;
+@Html.PageLinks(Model.PagingInfo, x=&amp;gt;Url.Action(“List”,new { page =x, category = Model.CurrentCategory }))&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
    <title>柏林</title>
    <link href="http://username.github.io/travel/2016/03/19/Berlin"/>
-   <updated>2016-03-19T00:00:00+08:00</updated>
+   <updated>2016-03-19T00:00:00-07:00</updated>
    <id>http://username.github.io/travel/2016/03/19/Berlin</id>
    <content type="html">
 &lt;p&gt;&lt;span&gt;柏林（德语：Berlin，德语发音：[bɛɐ̯ˈliːn]（Speaker Icon.svg 发音））是德国首都，也是德国最大的城市，现有居民约340万人。柏林位于德国东北部，四面被勃兰登堡州环绕，施普雷河和哈弗尔河流经该市。柏林也是德国十六个联邦州之一，和汉堡、不来梅同为德国仅有的三个的城市州。柏林是欧盟区内人口第3多的城市（欧盟区人口最多的都市是法国的巴黎，其次是英国的伦敦）以及城市面积第8大的城市。它是柏林－勃兰登堡都会区的中心，有来自超过190个国家的5百万人口。地理上位于欧洲平原，受温带季节性气候影响。城市周围三分之一的土地由森林、公园、花园、河流和湖泊组成。该根据考古发掘，柏林地区在八万年前（ 旧石器时代晚期市）巳经有人类活动. 该第一次有文字记载是在13世纪，柏林连续的成为以下这些国家的首都：普鲁士王国（1701年－1870年）、德意志帝国（1871年－1918年）、魏玛共和国（1919年－1933年）、纳粹德国（1933年－1945年）。在1920年代，柏林是世界第3大自治市。第二次世界大战后，城市被分割；东柏林成为东德的首都，而西柏林事实上成为西德在东德的一块飞地，被柏林墙围住。直到1990年两德统一，该市重新获得全德国首都的地位，驻有147个外国大使馆。柏林无论是从文化、政治、传媒还是科学上讲都称的上是世界级城市。该市经济主要基于服务业，包括多种多样的创造性产业、传媒集团、议会举办地点。柏林扮演欧洲大陆上航空与铁路运输交通枢纽的角色，同时它也是欧盟内游客数量最多的城市之一。主要的产业包括信息技术、制药、生物工程、生物科技、光学电子、交通工程和可再生能源。 柏林都会区有知名大学、研究院、体育赛事、管弦乐队、博物馆和知名人士。城市的历史遗存使该市成为国际电影产品的交流中心。该市在节日活动、建筑的多样化、夜生活、当代艺术、公共交通网络以及高质量生活方面得到广泛认可。柏林已经发展成一个全球焦点城市，以崇尚自由生活方式和现代精神的年轻人和艺术家而闻名[3]。&lt;/span&gt;&lt;/p&gt;
@@ -60,7 +104,7 @@
  <entry>
    <title>布拉格</title>
    <link href="http://username.github.io/travel/2016/03/12/Prague"/>
-   <updated>2016-03-12T00:00:00+08:00</updated>
+   <updated>2016-03-12T00:00:00-08:00</updated>
    <id>http://username.github.io/travel/2016/03/12/Prague</id>
    <content type="html">
 &lt;p&gt;&lt;span&gt;布拉格（捷克语：Praha，德语：Prag）是捷克共和国首都和最大城市、欧盟第十四大城市，[3]和历史上波西米亚的首都，位于该国的中波希米亚州、伏尔塔瓦河流域。该市地处欧洲大陆的中心，在交通上一向拥有重要地位，与周边国家的联系也相当密切（特别是在地理上恰好介于柏林与维也纳这2个德语国家的首都中间）。2006年3月，布拉格的面积为496平方公里，人口为118.3万。    &lt;/span&gt;&lt;/p&gt;
@@ -90,7 +134,7 @@
  <entry>
    <title>德累斯顿</title>
    <link href="http://username.github.io/travel/2016/03/09/Dresden"/>
-   <updated>2016-03-09T00:00:00+08:00</updated>
+   <updated>2016-03-09T00:00:00-08:00</updated>
    <id>http://username.github.io/travel/2016/03/09/Dresden</id>
    <content type="html">
 &lt;p&gt;&lt;span&gt;德累斯顿（德语：Dresden；索布语：Drježdźany，意为河边森林的人们），是德國萨克森自由州的首府，德国东部重要的文化、政治和经济中心。它位於德國的東南方，易北河谷地，南面離捷克邊界僅30公里，距捷克首都布拉格150公里，北面距離德國首都柏林200公里，离西北方萨克森州另一个大城市莱比锡100公里。  &lt;/span&gt;&lt;/p&gt;
