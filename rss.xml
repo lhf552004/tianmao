@@ -5,10 +5,27 @@
         <description>Jekyll Bootstrap - Name Lastname</description>
         <link>http://username.github.io</link>
         <atom:link href="http://username.github.io/rss.xml" rel="self" type="application/rss+xml" />
-        <lastBuildDate>Mon, 06 Jun 2016 21:50:30 -0700</lastBuildDate>
-        <pubDate>Mon, 06 Jun 2016 21:50:30 -0700</pubDate>
+        <lastBuildDate>Tue, 07 Jun 2016 00:10:01 -0700</lastBuildDate>
+        <pubDate>Tue, 07 Jun 2016 00:10:01 -0700</pubDate>
         <ttl>60</ttl>
 
+
+        <item>
+                <title>青云志</title>
+                <description>
+&lt;h2 id=&quot;section&quot;&gt;天书&lt;/h2&gt;
+&lt;p&gt;天地不仁以万物为刍狗&lt;br /&gt;
+不是针对电视剧，这句话作者是不是误解了？&lt;br /&gt;
+天地不仁，不是天地没有仁德之心，是因为天地没有感情，&lt;br /&gt;
+以万物为刍狗，不是看不起万物，而是平等对待众生。&lt;br /&gt;
+## 陆雪琪-杨紫
+杨紫饰演的陆雪琪，我感觉不到位，没有达到雪琪那种清高冰冷的气质，再看花絮，简直惨不忍睹，导演你能不能至少请个漂亮点的美女啊。&lt;/p&gt;
+
+</description>
+                <link>http://username.github.io/film/2016/06/06/Qingyunzhi</link>
+                <guid>http://username.github.io/film/2016/06/06/Qingyunzhi</guid>
+                <pubDate>Mon, 06 Jun 2016 00:00:00 -0700</pubDate>
+        </item>
 
         <item>
                 <title>MVC</title>
@@ -46,8 +63,23 @@ ViewResult继承ViewResultBase，而ViewResultBase继承于ActionResult
 &lt;p&gt;Product[] result = ((IEnumerable&lt;Product&gt;)((ViewResult)target.Index()).ViewData.Model).ToArray();&lt;/Product&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;cshtml&quot;&gt;在cshtml页面中使用拓展方法会报不支持动态转换&lt;/h2&gt;
-&lt;p&gt;需要显性强制转换&lt;br /&gt;
+&lt;p&gt;需要显性强制转换
 @Html.PageLinks(Model.PagingInfo, x=&amp;gt;Url.Action(“List”,new { page =x, category = Model.CurrentCategory }))&lt;/p&gt;
+
+&lt;h2 id=&quot;iis&quot;&gt;免费的IIS服务器&lt;/h2&gt;
+
+&lt;p&gt;国内很难找，都是以各种各样的理由收费。&lt;br /&gt;
+尤其是阿里云，以前还有免费的，现在好，捆绑销售CDN，一年30块。&lt;br /&gt;
+然后还要备案，在阿里云备案需要买阿里云专用背景布，真真笑死人。&lt;br /&gt;
+最后还要买域名，我快晕死了，到现在网站还没搭好，钱花了好几笔了，如果你是学习的，请远离阿里云。&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;所以只能把目光投到国外了，外国人做事比较靠谱，下面这个可以用：&lt;br /&gt;
+https://somee.com&lt;br /&gt;
+注册完网站就可以用了，是支持IIS的。  &lt;br /&gt;
+这是我根据书上做的运动购物网站，欢迎来访：&lt;br /&gt;
+&lt;a href=&quot;http://lhf552004.somee.com/&quot;&gt;SportsStore&lt;/a&gt; &lt;br /&gt;
+这个网站的缺点是网速慢，如果是VPN会好一点&lt;/p&gt;
+
 </description>
                 <link>http://username.github.io/learning/2016/06/06/MVC-Learn</link>
                 <guid>http://username.github.io/learning/2016/06/06/MVC-Learn</guid>
