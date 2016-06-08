@@ -92,4 +92,51 @@ body {
 		background-attachment: fixed, fixed;
 		background-position: center, center;
 	}
-  
+
+/*************/
+.header-content{
+  background-image: url("../images/header-extra.png");
+}
+.header-text{
+  color: linen;
+}
+.footer{
+  background-image: url("../images/footer-extra.png");
+}
+.footer-text{
+  color: #bfbfbf;
+}
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+body > .container {
+  padding: 60px 15px 0;
+}
+.remark{
+  padding: 0px 0px 15px;
+}
+
+div[class*=table]{
+  height: 500px;
+  overflow: auto;
+}
+input[label]{
+  width: 100%;
+}
+div[class$=progress]{
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
