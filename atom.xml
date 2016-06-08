@@ -4,13 +4,32 @@
  <title>Jekyll Bootstrap</title>
  <link href="http://username.github.io/atom.xml" rel="self"/>
  <link href="http://username.github.io"/>
- <updated>2016-06-07T00:17:52-07:00</updated>
+ <updated>2016-06-08T01:42:58-07:00</updated>
  <id>http://username.github.io</id>
  <author>
    <name>Name Lastname</name>
    <email>blah@email.test</email>
  </author>
 
+ 
+ <entry>
+   <title>儿童的视角</title>
+   <link href="http://username.github.io/education/2016/06/06/ViewsFromChildren"/>
+   <updated>2016-06-06T00:00:00-07:00</updated>
+   <id>http://username.github.io/education/2016/06/06/ViewsFromChildren</id>
+   <content type="html">
+&lt;h2 id=&quot;section&quot;&gt;儿童的视角&lt;/h2&gt;
+&lt;p&gt;在儿童的眼里，世界是多元的，是有趣的，&lt;br /&gt;
+而不是成人眼里灰蒙蒙的，&lt;br /&gt;
+遥想当年，我也是那般，总能发现有趣的事情，沉醉于自己的想象中。&lt;br /&gt;
+不知何时，我已经麻木，对周围的精彩熟视无睹，然后这只不过是很普通的，没必要大惊小怪。&lt;br /&gt;&lt;/p&gt;
+&lt;video id=&quot;violencevideo&quot; width=&quot;640&quot; height=&quot;480&quot; controls=&quot;&quot; preload=&quot;&quot;&gt;
+    &lt;source src=&quot;../../../../assets/Videos/ViewFromChild&#39;sEyes.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+    Your browser does not support HTML5 video.
+    你的浏览器不支持HTML5视频
+&lt;/video&gt;
+</content>
+ </entry>
  
  <entry>
    <title>青云志</title>
@@ -83,8 +102,14 @@ ViewResult继承ViewResultBase，而ViewResultBase继承于ActionResult
 https://somee.com&lt;br /&gt;
 注册完网站就可以用了，是支持IIS的。  &lt;br /&gt;
 这是我根据书上做的运动购物网站，欢迎来访：&lt;br /&gt;
-&lt;a href=&quot;http://lhf552004.somee.com/&quot;&gt;SportsStore&lt;/a&gt; &lt;br /&gt;
+&lt;a href=&quot;http://lhf552004.somee.com/&quot; target=&quot;_blank&quot;&gt;SportsStore&lt;/a&gt; &lt;br /&gt;
 这个网站的缺点是网速慢，如果是VPN会好一点&lt;/p&gt;
+
+&lt;p&gt;传说中的阿里云幕布终于到了，从上海到无锡，两天的时间，速度马马虎虎。不过打开我笑哭了，这是布啊&lt;br /&gt;
+这就是纸嘛，终于明白淘宝天猫到处是假货了，原来是上梁不正。
+本来还想拍完照，拿回去当抹布呢，这下好。
+等我把文件上传上去之后，发现网站打不开，一问之下，不支持MVC5. 之前做的工作白费。 &lt;br /&gt;
+&lt;img src=&quot;/assets/MVC/alibackgroudpaper.jpg&quot; alt=&quot;胜利柱&quot; title=&quot;胜利柱&quot; height=&quot;800&quot; width=&quot;1000&quot; /&gt;&lt;/p&gt;
 
 </content>
  </entry>
