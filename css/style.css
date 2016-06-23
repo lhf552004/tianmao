@@ -44,3 +44,8 @@ div[class$=progress]{
     margin-top: 20px;
     margin-bottom: 0px;
 }
+iframe {
+    min-width: 100%;
+    width: 100px;
+    *width: 100%;
+}

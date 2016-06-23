@@ -13,7 +13,8 @@ image:
 </div><!-- /.tile -->
 
 <div class="tile">
-  <h2 class="post-title" >诛仙</h2>
+   <a href= "/articles/Qingyunzhi"><h2 class="post-title" >诛仙</h2></a>
+
   <p class="post-excerpt">苍啷啷，陆雪琪拔出天琊神剑，指着对面她那心爱的人，鬼厉，曾经的张小凡。天地不仁，以万物为刍狗。</p>
 </div><!-- /.tile -->
 
