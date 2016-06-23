@@ -8,9 +8,14 @@
 - title: 杂记
   url: /articles/
   excerpt: "随感而发，杂乱无章."
-  image: 400x250.gif
+  image: zaji.gif
 
-- title: translate
+- title: 软件下载
+  url: /software/
+  excerpt: "自己做的一些小软件，有的有用，有的没作用."
+  image: software.gif
+
+- title: 纽豹在线翻译
   url: /translate/
   excerpt: "这是一些Muehlabuer在线翻译工具."
   image: 400x250.gif
@@ -18,9 +23,9 @@
 - title: 儿童
   url: /children/
   excerpt: "儿童."
-  image: 400x250.gif
+  image: children.gif
 
 - title: About
   url: /about/
   excerpt: "All about Skinny Bones for Jekyll."
-  image: 400x250.gif
+  image: about.gif
