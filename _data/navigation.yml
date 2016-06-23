@@ -1,0 +1,26 @@
+# Site navigation links
+
+- title: 旅游
+  url: /travel/
+  excerpt: "我希望能在世界每个角落留下我的足迹."
+  image: travel.gif
+
+- title: 杂记
+  url: /articles/
+  excerpt: "随感而发，杂乱无章."
+  image: 400x250.gif
+
+- title: translate
+  url: /translate/
+  excerpt: "这是一些Muehlabuer在线翻译工具."
+  image: 400x250.gif
+
+- title: 儿童
+  url: /children/
+  excerpt: "儿童."
+  image: 400x250.gif
+
+- title: About
+  url: /about/
+  excerpt: "All about Skinny Bones for Jekyll."
+  image: 400x250.gif

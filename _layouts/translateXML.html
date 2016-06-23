@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="TranslateXMLByXMLapp" ng-controller="TranslateXMLByXMLCtrl">
+  <head>
+    <meta charset="utf-8">
+    <title>{% if page.title %}{{ page.title }} • {% endif %}{{ site.title }}</title>
+    {% if page.excerpt %}<meta name="description" content="{{ page.excerpt | strip_html }}">{% endif %}
+    {% if page.tags %}<meta name="keywords" content="{{ page.tags | join: ', ' }}">{% endif %}
+    {% if page.author %}
+      {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.owner %}
+    {% endif %}
+    {% include open-graph.html %}
+    {% if author.google.plus %}<link rel="author" href="https://plus.google.com/{{ author.google.plus }}"/>{% endif %}
+    <script src="{{ site.url }}/js/jquery-1.12.3.min.js"></script>
+    <script src="{{ site.url }}/bootstrap/js/bootstrap.min.js"></script>
+    <link href="{{ site.url }}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ site.url }}/css/style.css" rel="stylesheet">
+    <!--<script src="../js/vendor/jquery.ui.widget.js"></script>-->
+    <!--<script src="../js/jquery.iframe-transport.js"></script>-->
+    <!--<script src="../js/jquery.fileupload.js"></script>-->
+    <script src="{{ site.url }}/js/angular.min.js"></script>
+    <script src="{{ site.url }}/js/Text.js"></script>
+    <script src="{{ site.url }}/js/FileSaver.js"></script>
+    <script src="{{ site.url }}/js/TranslateXMLByXMLapp.js"></script>
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
+
+    <link href="{{ site.url }}/atom.xml" type="application/atom+xml" rel="alternate" title="{{ site.title }} Atom Feed">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cleartype" content="on">
+
+    <link rel="stylesheet" href="{{ site.url }}/css/main.css">
+    <!-- HTML5 Shiv and Media Query Support for IE -->
+    <!--[if lt IE 9]>
+      <script src="{{ site.url }}/js/vendor/html5shiv.min.js"></script>
+      <script src="{{ site.url }}/js/vendor/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body>
+    {% include header.html %}
+
+
+    {{ content }}
+    {% include footer.html %}
+
+  </body>
+
+</html>
