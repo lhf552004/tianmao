@@ -6,7 +6,7 @@ locales:
   # -------------------
   en: &DEFAULT_EN
     overview: "Overview"
-    toc: "Table of Contents"
+    toc: "列表"
     written_by: "Allen Li"
     updated: "Updated"
     share: "Share on"

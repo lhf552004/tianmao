@@ -3,7 +3,7 @@ layout: article
 title: "About"
 date: 2014-06-02T09:44:20-04:00
 modified: 2014-08-27T14:56:44-04:00
-excerpt: "This is the Skinny Bones about page."
+excerpt: "This is Allen's blog."
 image:
   feature:
   teaser:
@@ -12,6 +12,7 @@ share: false
 ads: false
 ---
 
-This is a work in progress.
+欢迎访问小站，希望能够带给你快乐。
 
-Just a little something I'm using to jump start a site refresh. I like to think of it as a starter for building your own Jekyll site. I purposely keep the styling minimal and bare to make it easier to add your own flare and markup.
+           Best Regards
+           Allen
