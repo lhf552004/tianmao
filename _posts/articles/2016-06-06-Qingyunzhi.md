@@ -4,6 +4,8 @@ category : articles
 title :  青云志
 tagline: "诛仙"
 tags : [review]
+image:
+  teaser: qingyunzhi.jpg
 ---
 
 
