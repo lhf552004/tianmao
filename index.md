@@ -24,7 +24,7 @@ image:
 </div><!-- /.tile -->
 
 <div class="tile">
-  <a href= "/children/Familypower"><img src="http://lhf552004.github.io/images/family.jpg" alt="teaser" itemprop="image"/><h2 class="post-title">来自家庭的力量</h2></a>
+  <a href= "/children/amilypower"><img src="http://lhf552004.github.io/images/family.jpg" alt="teaser" itemprop="image"/><h2 class="post-title">来自家庭的力量</h2></a>
   <p class="post-excerpt">看上去是个搞笑的视频，却让我感觉很温馨。</p>
 </div><!-- /.tile -->
 
