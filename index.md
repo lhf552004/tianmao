@@ -8,8 +8,8 @@ image:
 <div class="tiles">
 
 <div class="tile">
-  <a href= "/articles/dushi"><h2 class="post-title">都市喧哗</h2></a>
-  <p class="post-excerpt">窗外雾霾扰扰，遮挡了远眺的目光，如恶魔般在大地间肆虐。 不远处高楼耸立，似乎在炫耀着繁华，殊不知在那繁华的背后，隐藏着无数的黑河。</p>
+  <a href= "/travel/Berlin"><h2 class="post-title">活泼的柏林</h2></a>
+  <p class="post-excerpt">长久以来德国给人的印象都是严谨刻板，不苟言笑，是不会搞什么幺蛾子的。可是我在柏林遇到的德国妹子却是非常的活泼，搞怪。</p>
 </div><!-- /.tile -->
 
 <div class="tile">
@@ -19,10 +19,13 @@ image:
 </div><!-- /.tile -->
 
 <div class="tile">
-  <a href= "/articles/Yunzhifan"><h2 class="post-title">仙剑云之凡</h2></a>
-  <p class="post-excerpt">  古力娜扎饰演的唐雨柔，最出色的部分我觉得是胖胖。这部戏有矛盾，第八集龙幽说当年妖人和凡人和平共处，后来妖人用天赋异能害人所以被女娲赶到幽冥界，只有几个厉害的人留下来了，其中最厉害的是姜世离。那问题是姜世离这么厉害了，为什么还要拜入折剑山庄？</p>
+  <a href= "/software/AutoBackup"><h2 class="post-title">自动备份</h2></a>
+  <p class="post-excerpt">有些资料我希望本地有，但是我又想备份到网盘上，以免资料丢失。所以我就做了一个这样一个小软件，它可以帮助自动备份。</p>
 </div><!-- /.tile -->
 
-
+<div class="tile">
+  <a href= "/children/familypower"><h2 class="post-title">来自家庭的力量</h2></a>
+  <p class="post-excerpt">看上去是个搞笑的视频，却让我感觉很温馨。</p>
+</div><!-- /.tile -->
 
 </div><!-- /.tiles -->
