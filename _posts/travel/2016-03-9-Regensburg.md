@@ -19,20 +19,20 @@ image:
 只不过二战时期被轰得稀巴烂。据说现在的城市是德国人用原来的砖头重新盖起来的。<br/>
 我感觉是吹牛逼的，不过我是没看出来是后来建的。<br/>
 
-<img src="/images/Regensburg/Sunshine.jpg" alt="Sunshine" title="Sunshine"/>
+<img src="/images/Regensburg/Sunshine.jpg" class="needStretch" alt="Sunshine" title="Sunshine"/>
 大街上，有很多人在晒太阳，天气转冷，这是今年最后一个周末可以享受日光浴了。
 
-<img src="/images/Regensburg/Donau.jpg" alt="Donau" title="Donau"/>
+<img src="/images/Regensburg/Donau.jpg" class="needStretch" alt="Donau" title="Donau"/>
 多瑙河穿城而过，多瑙河是欧洲第二大河流。竟然是这样的场景。
-<img src="/images/Regensburg/ShipOnDonau.jpg" alt="ShipOnDonau" title="ShipOnDonau"/>
+<img src="/images/Regensburg/ShipOnDonau.jpg" class="needStretch" alt="ShipOnDonau" title="ShipOnDonau"/>
 准备出发的游轮。
 
 
-<img src="/images/Regensburg/Church.jpg" alt="Church" title="Church"/>
+<img src="/images/Regensburg/Church.jpg" class="needStretch" alt="Church" title="Church"/>
 雷根斯堡很小，市中心就在教堂附近，这个教堂是这里最大的一个，忘了名字了。
 
 在教堂对面有两家卖冰淇淋的店，很多人都在等。
-<img src="/images/Regensburg/WaitIceCream.jpg" alt="WaitIceCream" title="WaitIceCream"/>
+<img src="/images/Regensburg/WaitIceCream.jpg" class="needStretch" alt="WaitIceCream" title="WaitIceCream"/>
 真搞不懂怎么这么爱吃冰淇淋，就在我们吃冰淇淋的时候，从教堂里走出三个颤巍巍的修女，向这边而来，然后一人拿着一个冰淇淋，开心的往回走。
 
 

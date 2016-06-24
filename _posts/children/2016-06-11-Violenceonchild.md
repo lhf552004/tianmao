@@ -19,4 +19,4 @@ image:
 <span>
     請不要給你的孩子這種負能量
 </span>
-<iframe class ="video" width="560" height="315" src="/videos/violence%20on%20child.mp4" frameborder="0" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes"> </iframe>
+<iframe class ="video needStretch" width="560" height="315" src="/videos/violence%20on%20child.mp4" frameborder="0" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes"> </iframe>
