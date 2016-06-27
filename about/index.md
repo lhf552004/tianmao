@@ -13,6 +13,6 @@ ads: false
 ---
 
 欢迎访问小站，希望能够带给你快乐。
-
+建站请联系lhf552004@163.com
            Best Regards
            Allen
