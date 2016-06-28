@@ -24,6 +24,7 @@ gems:
   - jekyll-feed
 share: false
 
+
 # Site owner
 owner:
   name: "Allen Li"
@@ -35,7 +36,7 @@ owner:
     plus: "+MichaelRoseDesign"
     ad-client: "ca-pub-7328585512091257"
     ad-slot: 3049671934
-  disqus-shortname:
+  disqus-shortname: lhf552004
 
 
 include:
