@@ -1,7 +1,7 @@
 ---
 layout: article
 category : software
-title :  电脑抽奖
+title :  Computer Lottery
 tagline: ""
 tags : [C#,lottery]
 image:
@@ -11,10 +11,10 @@ image:
 
 
 
-## 电脑抽奖
-避免人工干预，尽最大可能做到公正。 <br/>
-做这个软件纯粹是为了fun.<br/>
-下载： <a href = "{{ site.url }}/MBLottery.7z">电脑抽奖</a>
+## Computer lottery
+To avoid intervening from person, it try best to make fair for everyone. <br/>
+It just make fun.<br/>
+download： <a href = "{{ site.url }}/MBLottery.7z">Computer lottery</a>
 
 
 

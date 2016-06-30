@@ -8,8 +8,8 @@ image:
 <div class="tiles">
 
 <div class="tile">
-  <a href= "/travel/Berlin"><img src="http://lhf552004.github.io/images/Berlin.jpg" alt="teaser" itemprop="image"/><h2 class="post-title">活泼的柏林</h2></a>
-  <p class="post-excerpt">长久以来德国给人的印象都是严谨刻板，不苟言笑，是不会搞什么幺蛾子的。可是我在柏林遇到的德国妹子却是非常的活泼，搞怪。</p>
+  <a href= "/travel/Berlin"><img src="http://lhf552004.github.io/images/Berlin.jpg" alt="teaser" itemprop="image"/><h2 class="post-title">Lovely Berlin</h2></a>
+  <p class="post-excerpt">German is thought as Rigorous rigid, unsmiling long time. However I met a german girl lovely.</p>
 </div><!-- /.tile -->
 
 <div class="tile">
@@ -19,13 +19,14 @@ image:
 </div><!-- /.tile -->
 
 <div class="tile">
-  <a href= "/software/AutoBackup"><img src="http://lhf552004.github.io/images/backup.jpg" alt="teaser" itemprop="image"/><h2 class="post-title">自动备份</h2></a>
-  <p class="post-excerpt">有些资料我希望本地有，但是我又想备份到网盘上，以免资料丢失。所以我就做了一个这样一个小软件，它可以帮助自动备份。</p>
+  <a href= "/software/AutoBackup"><img src="http://lhf552004.github.io/images/backup.jpg" alt="teaser" itemprop="image"/><h2 class="post-title">Auto backup</h2></a>
+  <p class="post-excerpt">Some references or documents I hope to keep locally,At meantime, I also want to backup it to network to avoid to miss them.
+  The question is I couldn't backup every time when there is some changing. So I make a small tool to solve this problem.</p>
 </div><!-- /.tile -->
 
 <div class="tile">
-  <a href= "/children/Familypower"><img src="http://lhf552004.github.io/images/family.jpg" alt="teaser" itemprop="image"/><h2 class="post-title">来自家庭的力量</h2></a>
-  <p class="post-excerpt">看上去是个搞笑的视频，却让我感觉很温馨。</p>
+  <a href= "/children/Familypower"><img src="http://lhf552004.github.io/images/family.jpg" alt="teaser" itemprop="image"/><h2 class="post-title">From family power</h2></a>
+  <p class="post-excerpt">It looks like a funny video, but it let me feel warm.</p>
 </div><!-- /.tile -->
 
 </div><!-- /.tiles -->

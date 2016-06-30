@@ -1,9 +1,9 @@
 ---
 layout: archive
-title: "杂记"
+title: "Articles"
 date: 2014-05-30T11:39:03-04:00
 modified:
-excerpt: "堆放着思考，灵感和一些琐事"
+excerpt: "A collection of thoughts, inspiration, mistakes, and other minutia."
 tags: []
 image:
   feature:

@@ -1,31 +1,31 @@
 # Site navigation links
 
-- title: 旅游
+- title: travel
   url: /travel/
-  excerpt: "我希望能在世界每个角落留下我的足迹."
+  excerpt: "I hope to travel around the world."
   image: travel.gif
 
-- title: 杂记
+- title: articles
   url: /articles/
-  excerpt: "随感而发，杂乱无章."
+  excerpt: "A collection of thoughts, inspiration, mistakes, and other minutia.."
   image: zaji.gif
 
-- title: 软件下载
+- title: software
   url: /software/
-  excerpt: "自己做的一些小软件，有的有用，有的没作用."
+  excerpt: "I did some software. Some is useful, others not."
   image: software.gif
 
-- title: 纽豹在线翻译
+- title: translate
   url: /translate/
-  excerpt: "这是一些Muehlabuer在线翻译工具."
+  excerpt: "There are some Muehlabuer online tools."
   image: MB.jpg
 
-- title: 儿童
+- title: children
   url: /children/
-  excerpt: "儿童."
+  excerpt: "Children."
   image: children.gif
 
 - title: About
   url: /about/
-  excerpt: "这是江南雨生的博客."
+  excerpt: "This is Allen's blog."
   image: about.gif

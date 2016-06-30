@@ -1,9 +1,9 @@
 ---
 layout: archive
-title: "旅游"
+title: "Travel"
 date: 2016-03-30T11:39:03-04:00
 modified:
-excerpt: "最大的梦想是周游列国。在世界的每一个角落留下我的足迹"
+excerpt: "I hope to travel around the world."
 tags: []
 image:
   feature:

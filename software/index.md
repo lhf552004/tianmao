@@ -1,9 +1,9 @@
 ---
 layout: archive
-title: "软件"
+title: "Software"
 date: 2016-03-30T11:39:03-04:00
 modified:
-excerpt: "自己做的一些小软件，有的有用，有的没作用."
+excerpt: "I did some software. Some is useful, others not"
 tags: []
 image:
   feature: software.jpg
