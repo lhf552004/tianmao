@@ -1,6 +1,6 @@
 ---
 layout: article
-title: "对孩子的语言暴力"
+title: "To children's literal violence"
 date: 2014-05-31T23:14:02-04:00
 modified:
 categories: children
@@ -12,12 +12,12 @@ image:
   teaser: violence.jpg
 ---
 
-## 对孩子的语言暴力
-<p>这是我从facebook上看到的一个视频，说得挺有道理的，不要用语言伤害你的孩子，
-    回想自己小时候，有很多时候都被无意中伤害了，记忆深刻。
+## To children's literal violence
+<p>This a video from facebook. it's serious，Don't hurt your children with your speaking.
+    When I recall my childhood's memory, I found I was hurt unmeantly.
 </p>
 <span>
-    請不要給你的孩子這種負能量
+    Don't give your children negative power.
 </span>
 
 <video id="violencevideo" class="needStretch" controls preload>

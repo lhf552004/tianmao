@@ -1,18 +1,18 @@
 ---
 layout: article
 category : children
-title :  家庭的力量
-tagline: "想象力"
-tags : [Imagine]
-excerpt: "再大的困难也不怕，也家庭在。"
+title :  Power from family
+tagline: "family"
+tags : [family,help]
+excerpt: "Never mind the difficult when you have family."
 image:
   teaser: family.jpg
 ---
 
 
-## 这是一个很有趣的视频
-不知道是爸爸还是妈妈，倒垂着把小家伙拽上来，真聪明<br/>
-下次不能这么贪玩啦。<br/>
+## This is an interesting video from facebook
+either father or mother  inverted vertical to get the little. very smart.<br/>
+Do not be tricky again,son.<br/>
 <video id="violencevideo" class="needStretch" controls preload>
                 <source src="/videos/familyPower.mp4" type="video/mp4">
                     Your browser does not support HTML5 video.
