@@ -15,7 +15,8 @@ image:
 For my VM is a new VM, so I don't need to check the previous version.<br/>
 MYSQL version is 5.7.13 <br/>
 CentOS version is 7 <br/>
-### Install repository of MySQL  
+### Install repository of MySQL   
+ 
 
 There are some versions for Linux<a href="http://dev.mysql.com/downloads/repo/yum/">download</a> <br/>
 I don't know choose which one. Just select the first one: Red Hat Enterprise Linux 7 / Oracle Linux 7 (Architecture Independent), RPM Package <br/>
@@ -29,6 +30,7 @@ http://dev.mysql.com/doc/refman/5.7/en/linux-installation-yum-repo.html
 In the terminal, just enter: <br/>
  sudo yum install mysql-community-server
 ### Change root password  
+
   
  As it said, after installing the MySQL server, it will create a temporary password for account 'root'<br/>
  It is in /var/log/mysqld.log <br/>
@@ -43,7 +45,8 @@ In the terminal, just enter: <br/>
   <br/>
   Attention: Don't forget the ";" at the end.<br/>
   
- ### Create Database    
+### Create Database   
+  
  
  I think the client of MySQL is needed,at the beginning, it doesn't matter. With command: <br/>
  CREATE DATABASE dbname;
