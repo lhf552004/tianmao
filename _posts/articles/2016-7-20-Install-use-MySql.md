@@ -15,9 +15,8 @@ image:
 For my VM is a new VM, so I don't need to check the previous version.<br/>
 MYSQL version is 5.7.13 <br/>
 CentOS version is 7 <br/>
-### Install repository of MySQL   
- 
 
+### Install repository of MySQL    
 There are some versions for Linux<a href="http://dev.mysql.com/downloads/repo/yum/">download</a> <br/>
 I don't know choose which one. Just select the first one: Red Hat Enterprise Linux 7 / Oracle Linux 7 (Architecture Independent), RPM Package <br/>
 Double click to install, it don't take much time. <br/>
@@ -63,4 +62,11 @@ use demo;
 <br/>
 Then create a table you want: <br/>
 create TABLE job(id integer,name varchar(50),recipe varchar(50));
+
+
+### MySql workbench remote connect MySql  
+   
+  the user 'root' cannot be login when remote connect. You should create an administrator user. Then using it to login.
+  
+
 
