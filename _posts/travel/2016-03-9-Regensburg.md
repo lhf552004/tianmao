@@ -1,9 +1,9 @@
 ---
 layout: article
 category : travel
-title :  雷根斯堡
+title :  Regensburg
 tagline: ""
-tags : [雷根斯堡,旅游]
+tags : [Regensburg,travel]
 image:
   teaser: Regensburg.jpg
 ---
