@@ -4,7 +4,7 @@
 
 $(function () {
     $("#EN").click(function () {
-        var prefix = "http://lhf552004.github.io";
+        var prefix = "https://lhf552004.github.io";
         var relativePath = GetUrlRelativePath();
         window.location.href =prefix + relativePath;
     });

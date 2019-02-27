@@ -5,7 +5,7 @@ description: "Allen's blog"
 logo: 120x120.gif
 teaser: 400x250.gif
 locale: en_US
-url: "http://lhf552004.github.io"
+url: "https://lhf552004.github.io"
 feed:
   path: atom.xml
 
