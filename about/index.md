@@ -33,6 +33,6 @@ Fluent verbal and written English and have oversea working experience(Switzerlan
 Familiar with peripheral devices for instance,barcode printer, barcode scanner,MOXA,RFID devices. <br/>
 Over 3+ years experience in MatLab for data simulating and analyzing. <br/>
 
-If you want to contact me please send me email: [lhf552004@163.com](lhf552004@163.com) <br/>
+If you want to contact me please send me email: [lhf552004@163.com](mailto:lhf552004@163.com) <br/>
            Best Regards <br/>
            Allen
