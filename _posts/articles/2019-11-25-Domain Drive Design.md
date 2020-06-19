@@ -18,5 +18,7 @@ DDD另一个优越性，领域模型是有边界的，这句话怎么理解呢�
 
 ## 实现
 DDD总体结构分为四层  :  Infrastructure(基础实施层)，Domain(领域层)，Application(应用层)，Interfaces(表示层，也叫用户界面层或是接口层)，各个层面的作用下面介绍。
-![架构](Structure.png)
+
+![架构](/images/Structure.png)
+
 根据不同的情况，实现情况并不一定完全一致。或增或减层级。
