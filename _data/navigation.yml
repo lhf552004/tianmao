@@ -25,11 +25,6 @@
   excerpt: "Children."
   image: children.gif
 
-- title: Math Homework
-  url: /mathwork/
-  excerpt: "This is children's math homework."
-  image: children.gif
-
 - title: About
   url: /about/
   excerpt: "This is Allen's blog."

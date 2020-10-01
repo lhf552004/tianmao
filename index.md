@@ -25,6 +25,21 @@ image:
 </div><!-- /.tile -->
 
 <div class="tile">
+  <a href= "/mathwork/"><img src="https://lhf552004.github.io/images/Math.jpg" alt="teaser" itemprop="image"/><h2 class="post-title">Math work</h2></a>
+  <p class="post-excerpt">Children's math practice.</p>
+</div><!-- /.tile -->
+
+<div class="tile">
+  <a href= "/emes/"><img src="https://lhf552004.github.io/images/EMes.png" alt="teaser" itemprop="image"/><h2 class="post-title">E-MES</h2></a>
+  <p class="post-excerpt">Electronic MES.</p>
+</div><!-- /.tile -->
+
+<div class="tile">
+  <a href= "/GoogleAnalyticsTest/"><img src="https://lhf552004.github.io/images/googleanalytics.png" alt="teaser" itemprop="image"/><h2 class="post-title">Google Analytics test</h2></a>
+  <p class="post-excerpt">Google Analytics test, Simulate to send event to GA.</p>
+</div><!-- /.tile -->
+
+<div class="tile">
   <a href= "/children/Familypower"><img src="https://lhf552004.github.io/images/family.jpg" alt="teaser" itemprop="image"/><h2 class="post-title">From family power</h2></a>
   <p class="post-excerpt">It looks like a funny video, but it let me feel warm.</p>
 </div><!-- /.tile -->
