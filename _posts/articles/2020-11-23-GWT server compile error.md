@@ -15,10 +15,10 @@ image:
 greetServlet: An IncompatibleRemoteServiceException was thrown while processing this call.
 com.google.gwt.user.client.rpc.IncompatibleRemoteServiceException: This application is out of date, please click the refresh button on your browser. ( Could not locate requested method 'caculate(int, int)' in interface 'com.jci.myproject2.client.GreetingService' )
 
-根据下面文章发现，确实 class文件没有更新
-[java.lang.ClassNotFoundException on GWT async class in webapp](https://stackoverflow.com/questions/23435688/java-lang-classnotfoundexception-on-gwt-async-class-in-webapp)
+根据下面文章[java.lang.ClassNotFoundException on GWT async class in webapp](https://stackoverflow.com/questions/23435688/java-lang-classnotfoundexception-on-gwt-async-class-in-webapp)
 
-C:\Users\jliyawe\eclipse-workspace\MyGWTProject2\war\WEB-INF\classes\com\jci\myproject2\server
+发现下面路径下的class文件确实没有更新
+C:\Users\jliyawe\eclipse-workspace\MyGWTProject2\war\WEB-INF\classes\com\jci\myproject2\server\GreetingServiceImpl.class
 
 解决方案
 用command 运行 ant devmode, class文件重新编译了问题解决。
