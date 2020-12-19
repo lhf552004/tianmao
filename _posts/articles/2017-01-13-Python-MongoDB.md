@@ -6,7 +6,7 @@ tagline: ""
 tags : [Python, MongoDB]
 image:
   feature:
-  teaser: MVC.jpg
+  teaser: mongodb.png
 ---
 
 
