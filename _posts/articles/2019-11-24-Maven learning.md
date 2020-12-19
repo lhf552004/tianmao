@@ -1,7 +1,7 @@
 ---
 layout: article
 category : articles
-title :  
+title : Maven 
 tagline: ""
 tags : [Maven]
 image:
